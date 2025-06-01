@@ -1,3 +1,61 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2391e1250a52e6f587e23e94d0f88b4c8a04a78a63a27eff49cfa55e5aed2155
-size 1473
+using UnityEngine;
+using System;
+using RPG.Movement;
+using Mono.Cecil.Cil;
+using RPG.Combat;
+
+namespace RPG.Control
+{
+    public class PlayerController : MonoBehaviour
+    {
+        private Fighter fighter => GetComponent<Fighter>();
+
+        public void Update()
+        {
+            if (InteractWithCombat()) return;
+
+            if (InteractWithMovement()) return;
+
+            print("Nothing to do.");
+        }
+
+        private bool InteractWithCombat()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+
+            foreach (var hit in hits)
+            {
+                var target = hit.transform.GetComponent<CombatTarget>();
+                if (!fighter.CanAttack(target)) continue;
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    fighter.Attack(target);
+                }
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool InteractWithMovement()
+        {
+            bool hasHit = Physics.Raycast(GetMouseRay(), out RaycastHit hit);
+
+            if (hasHit)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    GetComponent<Mover>().StartMoveAction(hit.point);
+                }
+                return true;
+            }
+            return false;
+        }
+
+        private static Ray GetMouseRay()
+        {
+            return Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+    }
+}
