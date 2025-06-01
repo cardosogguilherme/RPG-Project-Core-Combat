@@ -1,3 +1,69 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fa44e3f491a56b037734abe025e1dec4aafaa3ecdd9f6d08363e11d2f78aeb16
-size 1758
+using RPG.Core;
+using RPG.Movement;
+using UnityEngine;
+
+namespace RPG.Combat
+{
+    public class Fighter : MonoBehaviour, IAction
+    {
+        [SerializeField] float weaponRange = 2f;
+        [SerializeField] float timeBetweenAttacks = 1f;
+        [SerializeField] float weaponDamage = 5f;
+
+        Health target;
+        float timeSinceLastAttack = 0f;
+
+        private void Update()
+        {
+            timeSinceLastAttack += Time.deltaTime;
+
+            if (target == null) return;
+            if (target.IsDead) return;
+
+            if (!IsTargetInRange())
+            {
+                GetComponent<Mover>().MoveTo(target.transform.position);
+            }
+            else
+            {
+                GetComponent<Mover>().Cancel();
+
+                AttackBehavior();
+            }
+        }
+
+        private void AttackBehavior()
+        {
+            transform.LookAt(target.transform);
+            if (timeSinceLastAttack < timeBetweenAttacks) return;
+
+            // Trigger the attack animation Hit()
+            GetComponent<Animator>().SetTrigger("attack");
+            timeSinceLastAttack = 0f;
+        }
+
+        // Animation Event
+        void Hit()
+        {
+            target.TakeDamage(weaponDamage);
+        }
+
+        private bool IsTargetInRange()
+        {
+            return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
+        }
+
+        public void Attack(CombarTarget combarTarget)
+        {
+            GetComponent<ActionScheduler>().StartAction(this);
+            target = combarTarget.GetComponent<Health>();
+        }
+
+        public void Cancel()
+        {
+            GetComponent<Animator>().SetTrigger("cancelAttack");
+            target = null;
+        }
+
+    }
+}
