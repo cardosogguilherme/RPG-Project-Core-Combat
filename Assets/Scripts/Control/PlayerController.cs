@@ -3,15 +3,24 @@ using System;
 using RPG.Movement;
 using Mono.Cecil.Cil;
 using RPG.Combat;
+using RPG.Core;
 
 namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
         private Fighter fighter => GetComponent<Fighter>();
+        private Health health;
+
+        private void Awake()
+        {
+            health = GetComponent<Health>();
+        }
 
         public void Update()
         {
+            if (health.IsDead) return;
+
             if (InteractWithCombat()) return;
 
             if (InteractWithMovement()) return;
