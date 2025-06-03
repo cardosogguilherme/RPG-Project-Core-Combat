@@ -13,8 +13,9 @@ namespace RPG.Control
 
         private GameObject player;
         private Health health;
-
         private Fighter fighter;// => GetComponent<Fighter>();
+        private Mover mover;
+        Vector3 guardPosition;
 
 
         private void Awake()
@@ -22,6 +23,9 @@ namespace RPG.Control
             player = GameObject.FindGameObjectWithTag("Player");
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
+            mover = GetComponent<Mover>();
+
+            guardPosition = transform.position;
         }
 
         private void Update()
@@ -49,7 +53,7 @@ namespace RPG.Control
 
         private void StopChase()
         {
-            fighter.Cancel();
+            mover.StartMoveAction(guardPosition);
         }
 
         private bool InAttackRangeOfPlayer()
