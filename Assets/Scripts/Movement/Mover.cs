@@ -37,8 +37,7 @@ namespace RPG.Movement
 
         public void MoveTo(Vector3 destination)
         {
-            var agent = GetComponent<NavMeshAgent>();
-            agent.destination = destination;
+            navMeshAgent.destination = destination;
             navMeshAgent.isStopped = false;
         }
 
