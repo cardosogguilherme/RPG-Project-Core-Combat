@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7829658652109961994, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_StoppingDistance
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8754862407048327555, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_Enabled
@@ -147,6 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspiscionTime: 5
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
 --- !u!1001 &8424220476933258349
 PrefabInstance:
   m_ObjectHideFlags: 0
