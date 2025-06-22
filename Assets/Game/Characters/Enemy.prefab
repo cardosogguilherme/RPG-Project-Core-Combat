@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4908889345547026389, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -698439348910057539, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_Height
       value: 2.0993674
@@ -34,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2177999788335576864, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: healthPoints
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalPosition.x
@@ -149,6 +153,7 @@ MonoBehaviour:
   suspiscionTime: 5
   patrolPath: {fileID: 0}
   waypointTolerance: 1
+  waypointDwellTime: 2
 --- !u!1001 &8424220476933258349
 PrefabInstance:
   m_ObjectHideFlags: 0

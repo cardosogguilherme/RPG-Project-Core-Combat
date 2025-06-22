@@ -8,17 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4908889345547026389, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177999788335576864, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
+      propertyPath: healthPoints
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11.24
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -34.50124
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3675014901171587189, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50,6 +58,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631480503610665165, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631480503610665165, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5356442129438889885, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
