@@ -9,7 +9,9 @@ namespace RPG.Core
         public void StartAction(IAction action)
         {
             print($"Starting action: {action}");
+
             if (currentAction == action) return;
+
             if (currentAction != null)
             {
                 currentAction.Cancel();

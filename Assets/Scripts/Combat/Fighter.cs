@@ -76,7 +76,10 @@ namespace RPG.Combat
         {
             GetComponent<Animator>().SetTrigger("cancelAttack");
             GetComponent<Animator>().ResetTrigger("attack");
+
             target = null;
+
+            GetComponent<Mover>().Cancel();
         }
 
         public bool CanAttack(GameObject combatTarget)
