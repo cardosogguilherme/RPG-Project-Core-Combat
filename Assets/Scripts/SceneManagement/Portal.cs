@@ -1,5 +1,6 @@
 namespace RPG.SceneManagement
 {
+    using System.Collections;
     using UnityEngine;
     using UnityEngine.SceneManagement;
 
@@ -10,7 +11,15 @@ namespace RPG.SceneManagement
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag != "Player") return;
-            SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
+            StartCoroutine(Transition());
+        }
+
+        private IEnumerator Transition()
+        {
+            DontDestroyOnLoad(gameObject);
+            yield return SceneManager.LoadSceneAsync(sceneToLoad);
+            Debug.Log("Transitioning to scene: " + sceneToLoad);
+            Destroy(gameObject);
         }
     }
 }
