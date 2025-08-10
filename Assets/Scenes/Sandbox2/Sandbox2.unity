@@ -695,18 +695,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 26427434468674441, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
-      propertyPath: sceneToLoad
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2364746636907119666, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.0529
-      objectReference: {fileID: 0}
-    - target: {fileID: 2364746636907119666, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.958
-      objectReference: {fileID: 0}
     - target: {fileID: 2364746636907119666, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.850827
@@ -750,6 +738,14 @@ PrefabInstance:
     - target: {fileID: 2806202118093625224, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701112425113830916, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701112425113830916, guid: 402a3047be5dc8d4094c65ed3a4f966b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
