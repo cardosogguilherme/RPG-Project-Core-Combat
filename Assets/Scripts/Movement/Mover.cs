@@ -14,7 +14,7 @@ namespace RPG.Movement
 
         private void Start()
         {
-            print("Mover started");
+            // print("Mover started");
             navMeshAgent = GetComponent<NavMeshAgent>();
             health = GetComponent<Health>();
         }
@@ -40,7 +40,7 @@ namespace RPG.Movement
 
         public void MoveTo(Vector3 destination, float speedFraction)
         {
-            print("chamou o moveTo");
+            // print("chamou o moveTo");
             navMeshAgent.destination = destination;
             navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
@@ -48,7 +48,7 @@ namespace RPG.Movement
 
         public void Cancel()
         {
-            print($"Cancelling movement {gameObject.name}");
+            // print($"Cancelling movement {gameObject.name}");
             navMeshAgent.isStopped = true;
         }
 
