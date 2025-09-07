@@ -3757,7 +3757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495683783}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1290801, y: 0.3869131, z: -0.05479841, w: 0.91139114}
+  m_LocalRotation: {x: 0.23454998, y: -0.16015474, z: 0.0392104, w: 0.9580185}
   m_LocalPosition: {x: -20.71234, y: 20.262571, z: -23.00342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4865,7 +4865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1402659227}
-  m_PathPosition: 1
+  m_PathPosition: 0.642178
   m_PositionUnits: 2
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -5541,10 +5541,6 @@ PrefabInstance:
       propertyPath: persistentObjectPrefab
       value: 
       objectReference: {fileID: 8886917363970168518, guid: 0fe2e4d20b7339a468f9a840319fd41b, type: 3}
-    - target: {fileID: 5242481825845336296, guid: ac64f955f3d45934d82aa9ff17b5916f, type: 3}
-      propertyPath: uniqueIdentifier
-      value: 451c408d-9538-46e4-892d-6b4f32dc270e
-      objectReference: {fileID: 0}
     - target: {fileID: 5478371822690201135, guid: ac64f955f3d45934d82aa9ff17b5916f, type: 3}
       propertyPath: m_Name
       value: Core
