@@ -23,6 +23,10 @@ namespace RPG.Core
         public void RestoreFromJToken(JToken state)
         {
             healthPoints = state.ToObject<float>();
+            if (healthPoints == 0)
+            {
+                Die();
+            }
         }
 
         public void TakeDamage(float damage)
