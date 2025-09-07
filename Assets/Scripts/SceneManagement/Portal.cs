@@ -52,6 +52,8 @@ namespace RPG.SceneManagement
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
 
+            savingWrapper.Save();
+
             yield return new WaitForSeconds(fadeWaitTime);
             yield return fader.FadeIn(fadeInTime);
 
@@ -69,8 +71,6 @@ namespace RPG.SceneManagement
 
             player.GetComponent<NavMeshAgent>().enabled = true;
         }
-
-
 
         private Portal GetOtherPortal()
         {
