@@ -1,9 +1,11 @@
 using System;
+using Newtonsoft.Json.Linq;
+using RPG.Saving;
 using UnityEngine;
 
 namespace RPG.Core
 {
-    public class Health : MonoBehaviour
+    public class Health : MonoBehaviour, IJsonSaveable
     {
         [SerializeField] float healthPoints = 100f;
         bool isDead = false;
@@ -11,6 +13,16 @@ namespace RPG.Core
         public bool IsDead
         {
             get { return isDead; }
+        }
+
+        public JToken CaptureAsJToken()
+        {
+            return JToken.FromObject(healthPoints);
+        }
+
+        public void RestoreFromJToken(JToken state)
+        {
+            healthPoints = state.ToObject<float>();
         }
 
         public void TakeDamage(float damage)

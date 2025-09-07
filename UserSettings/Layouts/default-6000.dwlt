@@ -533,8 +533,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 338
-    y: 79
+    x: 339
+    y: 24
     width: 1811
     height: 831
   m_SerializedDataModeController:
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.27603486, y: -0.52393115, z: 0.1907031, w: 0.78291076}
     speed: 2
-    m_Value: {x: 0.27603266, y: -0.523927, z: 0.19070157, w: 0.7829045}
+    m_Value: {x: -0.2760349, y: 0.52393115, z: -0.1907031, w: -0.78291076}
   m_Size:
     m_Target: 11.281065
     speed: 2
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 337
     height: 831
   m_SerializedDataModeController:
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 78}
     m_SelectedIDs: d0ae0000
     m_LastClickedID: 44752
-    m_ExpandedIDs: 00000000c2ac0000c4ac0000c6ac0000c8ac0000ccac0000d4ae000000ca9a3b
+    m_ExpandedIDs: 00000000f4b00000f6b00000f8b00000fab00000fcb00000feb00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1555,7 +1555,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c2ac0000c4ac0000c6ac0000c8ac0000caac0000ccac0000ceac0000
+    m_ExpandedIDs: 00000000f4b00000f6b00000f8b00000fab00000fcb00000feb00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1587,18 +1587,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000507c00000000000050ad000054ad000052ad000082ad0000e2b40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SavingWrapper
-      m_OriginalName: SavingWrapper
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 79148
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 4}
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 936
+    y: 881
     width: 2150
     height: 410
   m_SerializedDataModeController:
@@ -1754,8 +1754,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 2151
-    y: 79
+    x: 2152
+    y: 24
     width: 408
     height: 1267
   m_SerializedDataModeController:
