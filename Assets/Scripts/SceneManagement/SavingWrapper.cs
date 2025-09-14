@@ -30,6 +30,10 @@ namespace RPG.SceneManagement
             {
                 Save();
             }
+            else if (Input.GetKeyDown(KeyCode.Delete))
+            {
+                Delete();
+            }
         }
 
         public void Save()
@@ -40,6 +44,11 @@ namespace RPG.SceneManagement
         public void Load()
         {
             GetComponent<JsonSavingSystem>().Load(defaultSaveFile);
+        }
+
+        public void Delete()
+        {
+            GetComponent<JsonSavingSystem>().Delete(defaultSaveFile);
         }
     }
 }
