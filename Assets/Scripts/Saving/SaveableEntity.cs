@@ -7,13 +7,13 @@ using UnityEngine;
 namespace RPG.Saving
 {
     [ExecuteAlways]
-    public class JsonSaveableEntity : MonoBehaviour
+    public class SaveableEntity : MonoBehaviour
     {
 
         [SerializeField] string uniqueIdentifier = "";
 
         // CACHED STATE
-        static Dictionary<string, JsonSaveableEntity> globalLookup = new Dictionary<string, JsonSaveableEntity>();
+        static Dictionary<string, SaveableEntity> globalLookup = new Dictionary<string, SaveableEntity>();
 
         public string GetUniqueIdentifier()
         {
@@ -24,7 +24,7 @@ namespace RPG.Saving
         {
             JObject state = new JObject();
             IDictionary<string, JToken> stateDict = state;
-            foreach (IJsonSaveable jsonSaveable in GetComponents<IJsonSaveable>())
+            foreach (ISaveable jsonSaveable in GetComponents<ISaveable>())
             {
                 JToken token = jsonSaveable.CaptureAsJToken();
                 string component = jsonSaveable.GetType().ToString();
@@ -38,7 +38,7 @@ namespace RPG.Saving
         {
             JObject state = s.ToObject<JObject>();
             IDictionary<string, JToken> stateDict = state;
-            foreach (IJsonSaveable jsonSaveable in GetComponents<IJsonSaveable>())
+            foreach (ISaveable jsonSaveable in GetComponents<ISaveable>())
             {
                 string component = jsonSaveable.GetType().ToString();
                 if (stateDict.ContainsKey(component))

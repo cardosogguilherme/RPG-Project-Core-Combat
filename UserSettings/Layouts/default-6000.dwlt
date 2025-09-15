@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 50
+  controlID: 20
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 58
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -1133,9 +1133,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 39.98253, y: -1.0059365, z: -3.8402326}
+    m_Target: {x: 34.26236, y: 5.3352146, z: -0.38991117}
     speed: 2
-    m_Value: {x: 39.98253, y: -1.0059365, z: -3.8402326}
+    m_Value: {x: 34.26236, y: 5.3352146, z: -0.38991117}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1181,9 +1181,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.38862306, y: -0.5122043, z: 0.2868885, w: 0.7101644}
+    m_Target: {x: 0.24392602, y: -0.5267054, z: 0.16707589, w: 0.796986}
     speed: 2
-    m_Value: {x: -0.38862306, y: 0.5122043, z: -0.2868885, w: -0.7101644}
+    m_Value: {x: -0.24392603, y: 0.5267054, z: -0.1670759, w: -0.796986}
   m_Size:
     m_Target: 11.281065
     speed: 2
@@ -1507,7 +1507,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Game/Core
+    - Assets/Scripts/Combat
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1517,15 +1517,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Game/Core
+  - Assets/Scripts/Combat
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\repos\RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 78}
-    m_SelectedIDs: d0ae0000
-    m_LastClickedID: 44752
+    m_SelectedIDs: 0eb30000
+    m_LastClickedID: 45838
     m_ExpandedIDs: 00000000ecb00000eeb00000f0b00000f2b00000f4b00000f6b00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1581,8 +1581,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: d4480000
+    m_LastClickedInstanceID: 18644
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000507c00000000000050ad000054ad000052ad000082ad0000e2b40000
     m_RenameOverlay:

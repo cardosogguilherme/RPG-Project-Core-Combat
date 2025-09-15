@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace RPG.Saving
 {
-    public class JsonSavingSystem : MonoBehaviour
+    public class SavingSystem : MonoBehaviour
     {
         private const string extension = ".json";
 
@@ -104,7 +104,7 @@ namespace RPG.Saving
         private void CaptureAsToken(JObject state)
         {
             IDictionary<string, JToken> stateDict = state;
-            foreach (JsonSaveableEntity saveable in FindObjectsOfType<JsonSaveableEntity>())
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
             {
                 stateDict[saveable.GetUniqueIdentifier()] = saveable.CaptureAsJtoken();
             }
@@ -116,7 +116,7 @@ namespace RPG.Saving
         private void RestoreFromToken(JObject state)
         {
             IDictionary<string, JToken> stateDict = state;
-            foreach (JsonSaveableEntity saveable in FindObjectsOfType<JsonSaveableEntity>())
+            foreach (SaveableEntity saveable in FindObjectsOfType<SaveableEntity>())
             {
                 string id = saveable.GetUniqueIdentifier();
                 if (stateDict.ContainsKey(id))

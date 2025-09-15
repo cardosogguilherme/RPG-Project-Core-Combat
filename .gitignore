@@ -6,11 +6,21 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
+/[Bb]in/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
+
+# Ignore bin and obj folders anywhere in the project
+**/bin/
+**/obj/
+**/[Bb]in/
+**/[Oo]bj/
+
+# Ignore any .csproj files in Assets folder
+/[Aa]ssets/**/*.csproj
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

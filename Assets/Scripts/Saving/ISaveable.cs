@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RPG.Saving
 {
-    public interface IJsonSaveable
+    public interface ISaveable
     {
         /// <summary>
         /// Override to return a JToken representing the state of the IJsonSaveable

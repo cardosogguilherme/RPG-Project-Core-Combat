@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RPG.Core
 {
-    public class Health : MonoBehaviour, IJsonSaveable
+    public class Health : MonoBehaviour, ISaveable
     {
         [SerializeField] float healthPoints = 100f;
         bool isDead = false;

@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour, IAction, IJsonSaveable
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] float maxSpeed = 6f;
 

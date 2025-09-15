@@ -16,7 +16,7 @@ namespace RPG.SceneManagement
             var fader = FindAnyObjectByType<Fader>();
             fader.FadeOutImmediate();
 
-            yield return GetComponent<JsonSavingSystem>().LoadLastScene(defaultSaveFile);
+            yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
             yield return fader.FadeIn(fadeInTime);
         }
 
@@ -38,17 +38,17 @@ namespace RPG.SceneManagement
 
         public void Save()
         {
-            GetComponent<JsonSavingSystem>().Save(defaultSaveFile);
+            GetComponent<SavingSystem>().Save(defaultSaveFile);
         }
 
         public void Load()
         {
-            GetComponent<JsonSavingSystem>().Load(defaultSaveFile);
+            GetComponent<SavingSystem>().Load(defaultSaveFile);
         }
 
         public void Delete()
         {
-            GetComponent<JsonSavingSystem>().Delete(defaultSaveFile);
+            GetComponent<SavingSystem>().Delete(defaultSaveFile);
         }
     }
 }
