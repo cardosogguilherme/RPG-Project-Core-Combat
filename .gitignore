@@ -84,3 +84,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Scripts/Saving/bin.meta
+Assets/Scripts/Saving/obj.meta
+UserSettings/Layouts/default-6000.dwlt
+UserSettings/Layouts/default-6000.dwlt
