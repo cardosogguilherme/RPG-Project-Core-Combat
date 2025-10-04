@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: handTransform
       value: 
       objectReference: {fileID: 2325896796379810468}
+    - target: {fileID: -4908889345547026389, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
+      propertyPath: weaponOverride
+      value: 
+      objectReference: {fileID: 22100000, guid: 5d2f7c2669ee41f43979e3337efe7702, type: 2}
     - target: {fileID: 2177999788335576864, guid: 66381a1792d3314498b51f48aecfd846, type: 3}
       propertyPath: healthPoints
       value: 200
