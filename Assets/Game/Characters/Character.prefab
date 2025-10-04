@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -698439348910057539}
   - component: {fileID: 2177999788335576864}
   - component: {fileID: 4870312852346655922}
+  - component: {fileID: 9011267862980263561}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -155,9 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279776267053eb54fbb242e20b83910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponRange: 2
   timeBetweenAttacks: 1
-  weaponDamage: 5
+  handTransform: {fileID: 5356442129452398983}
+  defaultWeapon: {fileID: 11400000, guid: 19a169d4c7a40b94bacab01cd2b1e03c, type: 2}
 --- !u!114 &4144541767061910770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +220,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+--- !u!54 &9011267862980263561
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4631480503610665165}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &5356442129452593155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,6 +304,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!4 &5356442129452398983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+  m_PrefabInstance: {fileID: 5356442129452593155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5356442129452487961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 435482, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
