@@ -7,9 +7,7 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour, IAction
     {
-        [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
-        [SerializeField] float weaponDamage = 5f;
         [SerializeField] Transform handTransform = null;
         [SerializeField] Weapon weapon = null;
 
@@ -74,18 +72,20 @@ namespace RPG.Combat
         {
             if (target == null) return;
 
-            target.TakeDamage(weaponDamage);
+            if (weapon == null) return;
+
+            target.TakeDamage(weapon.WeaponDamage);
         }
 
         private bool IsTargetInRange()
         {
-            return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
+            return Vector3.Distance(transform.position, target.transform.position) < weapon.WeaponRange;
         }
 
-        public void Attack(GameObject combarTarget)
+        public void Attack(GameObject combatTarget)
         {
             GetComponent<ActionScheduler>().StartAction(this);
-            target = combarTarget.GetComponent<Health>();
+            target = combatTarget.GetComponent<Health>();
         }
 
         public void Cancel()
