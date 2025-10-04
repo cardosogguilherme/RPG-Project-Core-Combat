@@ -1,3 +1,4 @@
+using System;
 using RPG.Core;
 using RPG.Movement;
 using UnityEngine;
@@ -9,17 +10,12 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;
-        [SerializeField] GameObject weaponPrefab = null;
         [SerializeField] Transform handTransform = null;
-        [SerializeField] AnimatorOverrideController weaponOverride = null;
+        [SerializeField] Weapon weapon = null;
 
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
 
-        private void Start()
-        {
-            SpawnWeapon();
-        }
 
         private void Update()
         {
@@ -45,12 +41,16 @@ namespace RPG.Combat
             }
         }
 
+        private void Start()
+        {
+            SpawnWeapon();
+        }
+
         private void SpawnWeapon()
         {
-            if (weaponPrefab == null) return;
+            if (weapon == null) return;
             Animator animator = GetComponent<Animator>();
-            animator.runtimeAnimatorController = weaponOverride;
-            Instantiate(weaponPrefab, handTransform);
+            weapon.Spawn(handTransform, animator);
         }
 
         private void AttackBehavior()
