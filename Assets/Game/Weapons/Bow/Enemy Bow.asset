@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 269896e6baf43d74298864531a168e22, type: 3}
-  m_Name: Bow
-  m_EditorClassIdentifier: 
+  m_Name: Enemy Bow
+  m_EditorClassIdentifier: Assembly-CSharp::RPG.Combat.Weapon
   animatorOverride: {fileID: 22100000, guid: 22af9e8107062d24c8a89714b0f5662f, type: 2}
   equippedPrefab: {fileID: 1683640246631973729, guid: 7f8e57a6dccdffc4fa9bde905dc59e7c, type: 3}
   isRightHanded: 0
-  projectile: {fileID: 6477244852126745608, guid: ea79168bb9a407f4fa6c219e7bb099ae, type: 3}
+  projectile: {fileID: 6152926218838185564, guid: 3803cb1b8121faf4bb65f92b95d36ae4, type: 3}
   <WeaponRange>k__BackingField: 10
   <WeaponDamage>k__BackingField: 10
