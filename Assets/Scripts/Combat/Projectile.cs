@@ -1,25 +1,31 @@
 using System;
 using RPG.Control;
+using RPG.Core;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
-    [SerializeField] Transform target = null;
+    Health target = null;
 
     void Update()
     {
         if (target == null) { return; }
 
-        transform.LookAt(target);
+        transform.LookAt(GetAimLocation());
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+    }
+
+    public void SetTarget(Health target)
+    {
+        this.target = target;
     }
 
     private Vector3 GetAimLocation()
     {
         CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
-        if (targetCapsule == null) { return target.position; }
+        if (targetCapsule == null) { return target.transform.position; }
 
-        return target.position + Vector3.up * targetCapsule.height / 2;
+        return target.transform.position + Vector3.up * targetCapsule.height / 2;
     }
 }

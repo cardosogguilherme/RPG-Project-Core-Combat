@@ -76,7 +76,18 @@ namespace RPG.Combat
 
             if (defaultWeapon == null) return;
 
+            if (defaultWeapon.HasProjectile())
+            {
+                defaultWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+                return;
+            }
+
             target.TakeDamage(defaultWeapon.WeaponDamage);
+        }
+
+        void Shoot()
+        {
+            Hit();
         }
 
         private bool IsTargetInRange()

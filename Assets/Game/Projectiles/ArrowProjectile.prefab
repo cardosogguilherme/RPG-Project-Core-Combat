@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5127ef7ae51d7634294f62d3df168eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  speed: 8
 --- !u!1001 &5589867363957401728
 PrefabInstance:
   m_ObjectHideFlags: 0
