@@ -17,4 +17,4 @@ MonoBehaviour:
   isRightHanded: 0
   projectile: {fileID: 6477244852126745608, guid: ea79168bb9a407f4fa6c219e7bb099ae, type: 3}
   <WeaponRange>k__BackingField: 10
-  <WeaponDamage>k__BackingField: 7
+  <WeaponDamage>k__BackingField: 10
