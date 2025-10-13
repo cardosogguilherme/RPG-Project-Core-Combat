@@ -1,3 +1,4 @@
+using System;
 using RPG.Core;
 using UnityEngine;
 
@@ -14,13 +15,35 @@ namespace RPG.Combat
         [field: SerializeField] public float WeaponRange { get; private set; } = 2f;
         [field: SerializeField] public float WeaponDamage { get; private set; } = 5f;
 
+        const string weaponName = "Weapon";
+
+
         public void Spawn(Transform rightHand, Transform leftHand, Animator animator)
         {
+            DestroyOldWeapon(rightHand, leftHand);
+
             if (equippedPrefab == null) return;
             if (animatorOverride == null) return;
 
             animator.runtimeAnimatorController = animatorOverride;
-            Instantiate(equippedPrefab, GetHandTransform(rightHand, leftHand));
+
+            var weapon = Instantiate(equippedPrefab, GetHandTransform(rightHand, leftHand));
+            weapon.name = weaponName;
+        }
+
+        private void DestroyOldWeapon(Transform rightHand, Transform leftHand)
+        {
+            var oldWeapon = rightHand.Find(weaponName);
+
+            if (oldWeapon == null)
+            {
+                oldWeapon = leftHand.Find(weaponName);
+            }
+
+            if (oldWeapon == null) return;
+
+            oldWeapon.name = "DESTROYING";
+            Destroy(oldWeapon.gameObject);
         }
 
         private Transform GetHandTransform(Transform rightHand, Transform leftHand)
