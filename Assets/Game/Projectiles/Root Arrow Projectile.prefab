@@ -208,6 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 20
+  isHoming: 0
+  hitEffect: {fileID: 1683124602608125839, guid: 12f9d6146e9764b4e90eff4748debf2d, type: 3}
 --- !u!65 &9070809820585232770
 BoxCollider:
   m_ObjectHideFlags: 0
