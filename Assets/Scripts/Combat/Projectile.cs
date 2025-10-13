@@ -30,7 +30,9 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Health>() != target) { return; }
+        Health targetHealth = other.GetComponent<Health>();
+        if (targetHealth != target) { return; }
+        if (targetHealth.IsDead) { return; }
 
         target.TakeDamage(damage);
         Destroy(gameObject);
