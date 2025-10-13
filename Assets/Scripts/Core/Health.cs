@@ -44,8 +44,12 @@ namespace RPG.Core
             if (isDead) return;
 
             isDead = true;
+
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+
+            // The tutorial ended up having a check on the Projectile class
+            GetComponent<Collider>().enabled = false;
         }
     }
 }

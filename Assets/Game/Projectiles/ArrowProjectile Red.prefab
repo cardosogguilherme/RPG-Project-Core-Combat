@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6477244852126745608, guid: ea79168bb9a407f4fa6c219e7bb099ae, type: 3}
+      propertyPath: isHoming
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6999740162314246019, guid: ea79168bb9a407f4fa6c219e7bb099ae, type: 3}
       propertyPath: m_Parameters.colorGradient.ctime0
       value: 13878
@@ -130,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673986447931741471, guid: ea79168bb9a407f4fa6c219e7bb099ae, type: 3}
       propertyPath: m_Name
-      value: ArrowProjectile Enemy
+      value: ArrowProjectile Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

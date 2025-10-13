@@ -74,15 +74,15 @@ namespace RPG.Combat
         {
             if (target == null) return;
 
-            if (defaultWeapon == null) return;
+            if (currentWeapon == null) return;
 
-            if (defaultWeapon.HasProjectile())
+            if (currentWeapon.HasProjectile())
             {
-                defaultWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
                 return;
             }
 
-            target.TakeDamage(defaultWeapon.WeaponDamage);
+            target.TakeDamage(currentWeapon.WeaponDamage);
         }
 
         void Shoot()
@@ -92,7 +92,7 @@ namespace RPG.Combat
 
         private bool IsTargetInRange()
         {
-            return Vector3.Distance(transform.position, target.transform.position) < defaultWeapon.WeaponRange;
+            return Vector3.Distance(transform.position, target.transform.position) < currentWeapon.WeaponRange;
         }
 
         public void Attack(GameObject combatTarget)
